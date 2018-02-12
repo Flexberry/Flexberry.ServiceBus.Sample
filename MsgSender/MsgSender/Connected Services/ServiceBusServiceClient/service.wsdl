@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=" namespace="http://www.w3.org/2001/XMLSchema" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IIS.Persona.ServiceBus.Objects" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=" namespace="http://www.w3.org/2001/XMLSchema" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IIS.Persona.ServiceBus.Objects" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=" namespace="http://www.w3.org/2001/XMLSchema" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IIS.Persona.ServiceBus.Objects" />
+      <xsd:import schemaLocation="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceBusService_CreateClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateClient" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_CreateClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_DeleteClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClient" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_DeleteClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_DoesEventRisen_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoesEventRisen" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_DoesEventRisen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoesEventRisenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetCurrentMessageCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentMessageCount" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetCurrentMessageCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentMessageCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetCurrentThisTypeMessageCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentThisTypeMessageCount" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetCurrentThisTypeMessageCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentThisTypeMessageCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageFromESB_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageFromESB" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageFromESB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageFromESBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageInfo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageWithGroupFromESB_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageWithGroupFromESB" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageWithGroupFromESB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageWithGroupFromESBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageInfoWithGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageInfoWithGroup" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageInfoWithGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageInfoWithGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageWithTagsFromESB_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageWithTagsFromESB" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageWithTagsFromESB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageWithTagsFromESBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageInfoWithTags_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageInfoWithTags" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_GetMessageInfoWithTags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageInfoWithTagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_RiseEventOnESB_InputMessage">
+    <wsdl:part name="parameters" element="tns:RiseEventOnESB" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_RiseEventOnESB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RiseEventOnESBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_SendMessageToESB_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageToESB" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_SendMessageToESB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageToESBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_SendMessageToESBWithUseGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageToESBWithUseGroup" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_SendMessageToESBWithUseGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageToESBWithUseGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_SubscribeClientForEventCallback_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeClientForEventCallback" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_SubscribeClientForEventCallback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeClientForEventCallbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_SubscribeClientForMessageCallback_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeClientForMessageCallback" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_SubscribeClientForMessageCallback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeClientForMessageCallbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_IsUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUp" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusService_IsUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_AddNewEvntType_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewEvntType" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_AddNewEvntType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewEvntTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_AddNewMsgType_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewMsgType" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_AddNewMsgType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewMsgTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_GetEvntTypesFromBus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvntTypesFromBus" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_GetEvntTypesFromBus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvntTypesFromBusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_GetMsgTypesFromBus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMsgTypesFromBus" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_GetMsgTypesFromBus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMsgTypesFromBusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_UpdateClientSubscribesForEvnts_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClientSubscribesForEvnts" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_UpdateClientSubscribesForEvnts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClientSubscribesForEvntsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_UpdateClientSubscribesForMsgs_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClientSubscribesForMsgs" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBusInterop_UpdateClientSubscribesForMsgs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClientSubscribesForMsgsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICallbackSubscriber_AcceptMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICallbackSubscriber_AcceptMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICallbackSubscriber_RiseEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:RiseEvent" />
+  </wsdl:message>
+  <wsdl:message name="ICallbackSubscriber_RiseEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RiseEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICallbackSubscriber_GetSourceId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceId" />
+  </wsdl:message>
+  <wsdl:message name="ICallbackSubscriber_GetSourceId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceBusService">
+    <wsdl:operation name="CreateClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/CreateClient" message="tns:IServiceBusService_CreateClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/CreateClientResponse" message="tns:IServiceBusService_CreateClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/DeleteClient" message="tns:IServiceBusService_DeleteClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/DeleteClientResponse" message="tns:IServiceBusService_DeleteClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoesEventRisen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/DoesEventRisen" message="tns:IServiceBusService_DoesEventRisen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/DoesEventRisenResponse" message="tns:IServiceBusService_DoesEventRisen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentMessageCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/GetCurrentMessageCount" message="tns:IServiceBusService_GetCurrentMessageCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/GetCurrentMessageCountResponse" message="tns:IServiceBusService_GetCurrentMessageCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentThisTypeMessageCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/GetCurrentThisTypeMessageCount" message="tns:IServiceBusService_GetCurrentThisTypeMessageCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/GetCurrentThisTypeMessageCountResponse" message="tns:IServiceBusService_GetCurrentThisTypeMessageCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageFromESB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageFromESB" message="tns:IServiceBusService_GetMessageFromESB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageFromESBResponse" message="tns:IServiceBusService_GetMessageFromESB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageInfo" message="tns:IServiceBusService_GetMessageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageInfoResponse" message="tns:IServiceBusService_GetMessageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageWithGroupFromESB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageWithGroupFromESB" message="tns:IServiceBusService_GetMessageWithGroupFromESB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageWithGroupFromESBResponse" message="tns:IServiceBusService_GetMessageWithGroupFromESB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageInfoWithGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageInfoWithGroup" message="tns:IServiceBusService_GetMessageInfoWithGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageInfoWithGroupResponse" message="tns:IServiceBusService_GetMessageInfoWithGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageWithTagsFromESB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageWithTagsFromESB" message="tns:IServiceBusService_GetMessageWithTagsFromESB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageWithTagsFromESBResponse" message="tns:IServiceBusService_GetMessageWithTagsFromESB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageInfoWithTags">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageInfoWithTags" message="tns:IServiceBusService_GetMessageInfoWithTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/GetMessageInfoWithTagsResponse" message="tns:IServiceBusService_GetMessageInfoWithTags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RiseEventOnESB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/RiseEventOnESB" message="tns:IServiceBusService_RiseEventOnESB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/RiseEventOnESBResponse" message="tns:IServiceBusService_RiseEventOnESB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageToESB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/SendMessageToESB" message="tns:IServiceBusService_SendMessageToESB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/SendMessageToESBResponse" message="tns:IServiceBusService_SendMessageToESB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageToESBWithUseGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/SendMessageToESBWithUseGroup" message="tns:IServiceBusService_SendMessageToESBWithUseGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/SendMessageToESBWithUseGroupResponse" message="tns:IServiceBusService_SendMessageToESBWithUseGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscribeClientForEventCallback">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/SubscribeClientForEventCallback" message="tns:IServiceBusService_SubscribeClientForEventCallback_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/SubscribeClientForEventCallbackResponse" message="tns:IServiceBusService_SubscribeClientForEventCallback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscribeClientForMessageCallback">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/SubscribeClientForMessageCallback" message="tns:IServiceBusService_SubscribeClientForMessageCallback_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/SubscribeClientForMessageCallbackResponse" message="tns:IServiceBusService_SubscribeClientForMessageCallback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusService/IsUp" message="tns:IServiceBusService_IsUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusService/IsUpResponse" message="tns:IServiceBusService_IsUp_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IServiceBusInterop">
+    <wsdl:operation name="AddNewEvntType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusInterop/AddNewEvntType" message="tns:IServiceBusInterop_AddNewEvntType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusInterop/AddNewEvntTypeResponse" message="tns:IServiceBusInterop_AddNewEvntType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMsgType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusInterop/AddNewMsgType" message="tns:IServiceBusInterop_AddNewMsgType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusInterop/AddNewMsgTypeResponse" message="tns:IServiceBusInterop_AddNewMsgType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvntTypesFromBus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusInterop/GetEvntTypesFromBus" message="tns:IServiceBusInterop_GetEvntTypesFromBus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusInterop/GetEvntTypesFromBusResponse" message="tns:IServiceBusInterop_GetEvntTypesFromBus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMsgTypesFromBus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusInterop/GetMsgTypesFromBus" message="tns:IServiceBusInterop_GetMsgTypesFromBus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusInterop/GetMsgTypesFromBusResponse" message="tns:IServiceBusInterop_GetMsgTypesFromBus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClientSubscribesForEvnts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForEvnts" message="tns:IServiceBusInterop_UpdateClientSubscribesForEvnts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForEvntsResponse" message="tns:IServiceBusInterop_UpdateClientSubscribesForEvnts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClientSubscribesForMsgs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForMsgs" message="tns:IServiceBusInterop_UpdateClientSubscribesForMsgs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForMsgsResponse" message="tns:IServiceBusInterop_UpdateClientSubscribesForMsgs_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ICallbackSubscriber">
+    <wsdl:operation name="AcceptMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICallbackSubscriber/AcceptMessage" message="tns:ICallbackSubscriber_AcceptMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICallbackSubscriber/AcceptMessageResponse" message="tns:ICallbackSubscriber_AcceptMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RiseEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICallbackSubscriber/RiseEvent" message="tns:ICallbackSubscriber_RiseEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICallbackSubscriber/RiseEventResponse" message="tns:ICallbackSubscriber_RiseEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSourceId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICallbackSubscriber/GetSourceId" message="tns:ICallbackSubscriber_GetSourceId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICallbackSubscriber/GetSourceIdResponse" message="tns:ICallbackSubscriber_GetSourceId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IServiceBusService" type="tns:IServiceBusService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsp:Policy>
+      <wsp:ExactlyOne>
+        <wsp:All>
+          <wsaw:UsingAddressing />
+        </wsp:All>
+      </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsdl:operation name="CreateClient">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/CreateClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClient">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/DeleteClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoesEventRisen">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/DoesEventRisen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentMessageCount">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/GetCurrentMessageCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentThisTypeMessageCount">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/GetCurrentThisTypeMessageCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageFromESB">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/GetMessageFromESB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageInfo">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/GetMessageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageWithGroupFromESB">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/GetMessageWithGroupFromESB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageInfoWithGroup">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/GetMessageInfoWithGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageWithTagsFromESB">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/GetMessageWithTagsFromESB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageInfoWithTags">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/GetMessageInfoWithTags" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RiseEventOnESB">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/RiseEventOnESB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageToESB">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/SendMessageToESB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageToESBWithUseGroup">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/SendMessageToESBWithUseGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscribeClientForEventCallback">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/SubscribeClientForEventCallback" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscribeClientForMessageCallback">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/SubscribeClientForMessageCallback" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUp">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusService/IsUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_IServiceBusInterop" type="tns:IServiceBusInterop">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsp:Policy>
+      <wsp:ExactlyOne>
+        <wsp:All>
+          <wsaw:UsingAddressing />
+        </wsp:All>
+      </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsdl:operation name="AddNewEvntType">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusInterop/AddNewEvntType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMsgType">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusInterop/AddNewMsgType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvntTypesFromBus">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusInterop/GetEvntTypesFromBus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMsgTypesFromBus">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusInterop/GetMsgTypesFromBus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClientSubscribesForEvnts">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForEvnts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClientSubscribesForMsgs">
+      <soap12:operation soapAction="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForMsgs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_ICallbackSubscriber" type="tns:ICallbackSubscriber">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsp:Policy>
+      <wsp:ExactlyOne>
+        <wsp:All>
+          <wsaw:UsingAddressing />
+        </wsp:All>
+      </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsdl:operation name="AcceptMessage">
+      <soap12:operation soapAction="http://tempuri.org/ICallbackSubscriber/AcceptMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RiseEvent">
+      <soap12:operation soapAction="http://tempuri.org/ICallbackSubscriber/RiseEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSourceId">
+      <soap12:operation soapAction="http://tempuri.org/ICallbackSubscriber/GetSourceId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="service">
+    <wsdl:port name="WSHttpBinding_IServiceBusService" binding="tns:WSHttpBinding_IServiceBusService">
+      <soap:address location="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService" />
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IServiceBusInterop" binding="tns:WSHttpBinding_IServiceBusInterop">
+      <soap:address location="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService" />
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_ICallbackSubscriber" binding="tns:WSHttpBinding_ICallbackSubscriber">
+      <soap:address location="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
