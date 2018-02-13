@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsgSender", "MsgSender\MsgSender.csproj", "{DCFA9418-A9AF-483F-B7C0-D03BCFF7F511}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsgSender", "MsgSender\MsgSender.csproj", "{B037EA1F-804B-495F-8AE4-13BCE07DBBAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,16 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DCFA9418-A9AF-483F-B7C0-D03BCFF7F511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCFA9418-A9AF-483F-B7C0-D03BCFF7F511}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCFA9418-A9AF-483F-B7C0-D03BCFF7F511}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DCFA9418-A9AF-483F-B7C0-D03BCFF7F511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B037EA1F-804B-495F-8AE4-13BCE07DBBAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B037EA1F-804B-495F-8AE4-13BCE07DBBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B037EA1F-804B-495F-8AE4-13BCE07DBBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B037EA1F-804B-495F-8AE4-13BCE07DBBAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
-		SolutionGuid = {A85FCB31-5F39-4753-9406-0B18002CBF8E}
+		SolutionGuid = {FBD1A5DC-A114-4CBE-8BD4-E3EF2E983FBA}
 	EndGlobalSection
 EndGlobal

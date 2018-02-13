@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6d988f34-f131-4c8e-a65e-5a8d59ca7a82" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2dee0f5e-f700-48d9-b2c4-24922a7b672c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService.xsd" MetadataType="Schema" ID="4b339654-85e3-4087-921f-9d06592db748" SourceId="1" SourceUrl="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd1" />
-    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService1.xsd" MetadataType="Schema" ID="57e989ac-9792-48b8-9ba3-ae7822fa97f1" SourceId="1" SourceUrl="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd2" />
-    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService2.xsd" MetadataType="Schema" ID="ea9433ba-7c77-4c54-b66a-0b94a8e4eaa1" SourceId="1" SourceUrl="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd3" />
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="fee591ed-bab4-4a9b-936e-097bfd6010d3" SourceId="1" SourceUrl="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService" />
-    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService3.xsd" MetadataType="Schema" ID="3218d627-0f67-40ac-9601-31e4125826c3" SourceId="1" SourceUrl="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd0" />
+    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService.xsd" MetadataType="Schema" ID="a95b2bf9-09b0-45dc-85ca-94cad6625fb9" SourceId="1" SourceUrl="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd1" />
+    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService1.xsd" MetadataType="Schema" ID="a9266f02-e897-48e8-9da6-7af4e26d860f" SourceId="1" SourceUrl="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd2" />
+    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService2.xsd" MetadataType="Schema" ID="1d20b6ea-9555-4a09-920c-3e578dbb2e38" SourceId="1" SourceUrl="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd3" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1a1bf7c3-5e87-4f09-90b8-679a7bc3811b" SourceId="1" SourceUrl="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService" />
+    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService3.xsd" MetadataType="Schema" ID="30699db8-96c5-4064-a5ab-ca7830f8ae9a" SourceId="1" SourceUrl="http://bi-vm1.cloudapp.net:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

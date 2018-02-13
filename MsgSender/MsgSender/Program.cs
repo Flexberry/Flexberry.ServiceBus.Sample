@@ -1,14 +1,9 @@
 ﻿namespace MsgSender
 {
+    using ServiceBusServiceClient;
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Configuration;
-    using ICSSoft.STORMNET.Tools;
     using System.Net;
-    
+    using System.Configuration;
 
     class Program
     {
@@ -24,7 +19,7 @@
 
                 if (s != "exit")
                 {
-                    using (var ServiceBus = new ServiceBusServiceClient("SBService"))
+                    using (var ServiceBus = new ServiceBusServiceClient.ServiceBusServiceClient())
                     {
                         // Установим прокси, если нужно.
                         var useProxy = ConfigurationManager.AppSettings["UseProxy"];
@@ -42,7 +37,7 @@
                         {
                             ClientID = ConfigurationManager.AppSettings["ServiceID4SB"],
                             MessageTypeID = ConfigurationManager.AppSettings["MessageTypeID"],
-                            Body = ToolZIP.Compress("Hello from " + s + "!")
+                            Body = "Hello from " + s + "!" 
                         };
 
                         // И отправим его через шину.
@@ -52,7 +47,6 @@
                     }
                 }
             }
-
         }
     }
 }

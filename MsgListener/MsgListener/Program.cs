@@ -29,81 +29,83 @@
 
             internal static void StartService()
             {
-                myServiceHost = new ServiceHost(typeof(MsgListenerClass));
+                var service = new MsgListenerClass();
+                myServiceHost = new ServiceHost(service);
 
                 myServiceHost.Open();
 
-                ScanThread = MsgListenerClass.GetScanningThread();
-                ScanThread.Start();
+                //ScanThread = MsgListenerClass.GetScanningThread();
+                //ScanThread.Start();
             }
 
             internal static void StopService()
             {
-                ScanThread.Abort();
+                //ScanThread.Abort();
 
                 if (myServiceHost.State != CommunicationState.Closed)
                     myServiceHost.Close();
             }
         }
+    }
 
-        [ServiceContract]
-        public interface ICallbackSubscriber
+    [ServiceContract(ConfigurationName = "MsgListener.ICallbackSubscriber")]
+    public interface ICallbackSubscriber
+    {
+        [OperationContract]
+        void AcceptMessage(MessageFromESB msg);
+
+        [OperationContract]
+        void RiseEvent(string ИдТипаСобытия);
+
+        string GetSourceId();
+    }
+
+    [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]
+    public class MsgListenerClass : ICallbackSubscriber
+    {
+        public string GetSourceId()
         {
-            [OperationContract]
-            void AcceptMessage(MessageFromESB msg);
-
-            [OperationContract]
-            void RiseEvent(string ИдТипаСобытия);
-
-            string GetSourceId();
+            return ConfigurationManager.AppSettings["ExternalKey"];
         }
 
-        public class MsgListenerClass : ICallbackSubscriber
+        public void AcceptMessage(MessageFromESB msg)
         {
-            public string GetSourceId()
+            Console.WriteLine(ToolZIP.Decompress(msg.Body));
+        }
+
+        public void RiseEvent(string ИдТипаСобытия)
+        {
+            Console.WriteLine(ИдТипаСобытия);
+        }
+
+        internal static void SubscribeMe4Messages(string ИдТипаСообщения)
+        {
+            using (ServiceBusServiceClient.ServiceBusServiceClient ServiceBus = new
+            ServiceBusServiceClient.ServiceBusServiceClient())
             {
-                return ConfigurationManager.AppSettings["ExternalKey"];
-            }
+                ServiceBus.SubscribeClientForMessageCallback(
+                ConfigurationManager.AppSettings["ServiceID4SB"],
+                ИдТипаСообщения);
 
-            public void AcceptMessage(MessageFromESB msg)
+                ServiceBus.Close();
+            }
+        }
+
+        private static void NewSubscribeOrUpdate()
+        {
+            while (true)
             {
-                Console.WriteLine(ToolZIP.Decompress(msg.Body));
+                SubscribeMe4Messages(
+                ConfigurationManager.AppSettings["MessageTypeID"]);
+
+                Thread.Sleep(Convert.ToInt32(
+                ConfigurationManager.AppSettings["ScanPeriod"]));
             }
+        }
 
-            public void RiseEvent(string ИдТипаСобытия)
-            {
-                Console.WriteLine(ИдТипаСобытия);
-            }
-
-            internal static void SubscribeMe4Messages(string ИдТипаСообщения)
-            {
-                using (ServiceBusServiceClient.ServiceBusServiceClient ServiceBus = new
-                ServiceBusServiceClient.ServiceBusServiceClient())
-                {
-                    ServiceBus.SubscribeClientForMessageCallback(
-                    ConfigurationManager.AppSettings["ServiceID4SB"],
-                    ИдТипаСообщения);
-
-                    ServiceBus.Close();
-                }
-            }
-
-            private static void NewSubscribeOrUpdate()
-            {
-                while (true)
-                {
-                    SubscribeMe4Messages(
-                    ConfigurationManager.AppSettings["MessageTypeID"]);
-
-                    Thread.Sleep(Convert.ToInt32(
-                    ConfigurationManager.AppSettings["ScanPeriod"]));
-                }
-            }
-
-            public static Thread GetScanningThread()
-            {
-                return new Thread(NewSubscribeOrUpdate);
-            }
+        public static Thread GetScanningThread()
+        {
+            return new Thread(NewSubscribeOrUpdate);
         }
     }
 }

@@ -8,3 +8,2019 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+namespace MsgSender.ServiceBusServiceClient {
+    using System.Runtime.Serialization;
+    using System;
+    
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MessageFromESB", Namespace="http://schemas.datacontract.org/2004/07/IIS.Persona.ServiceBus.Objects")]
+    [System.SerializableAttribute()]
+    public partial class MessageFromESB : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] AttachmentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BodyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GroupIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime MessageFormingTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageTypeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SenderNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<string, string> TagsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Attachment {
+            get {
+                return this.AttachmentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttachmentField, value) != true)) {
+                    this.AttachmentField = value;
+                    this.RaisePropertyChanged("Attachment");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Body {
+            get {
+                return this.BodyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BodyField, value) != true)) {
+                    this.BodyField = value;
+                    this.RaisePropertyChanged("Body");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string GroupID {
+            get {
+                return this.GroupIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GroupIDField, value) != true)) {
+                    this.GroupIDField = value;
+                    this.RaisePropertyChanged("GroupID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime MessageFormingTime {
+            get {
+                return this.MessageFormingTimeField;
+            }
+            set {
+                if ((this.MessageFormingTimeField.Equals(value) != true)) {
+                    this.MessageFormingTimeField = value;
+                    this.RaisePropertyChanged("MessageFormingTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MessageTypeID {
+            get {
+                return this.MessageTypeIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageTypeIDField, value) != true)) {
+                    this.MessageTypeIDField = value;
+                    this.RaisePropertyChanged("MessageTypeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SenderName {
+            get {
+                return this.SenderNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SenderNameField, value) != true)) {
+                    this.SenderNameField = value;
+                    this.RaisePropertyChanged("SenderName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<string, string> Tags {
+            get {
+                return this.TagsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TagsField, value) != true)) {
+                    this.TagsField = value;
+                    this.RaisePropertyChanged("Tags");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MessageOrderingInformation", Namespace="http://schemas.datacontract.org/2004/07/IIS.Persona.ServiceBus.Objects")]
+    [System.SerializableAttribute()]
+    public partial class MessageOrderingInformation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FormingTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PriorityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FormingTime {
+            get {
+                return this.FormingTimeField;
+            }
+            set {
+                if ((this.FormingTimeField.Equals(value) != true)) {
+                    this.FormingTimeField = value;
+                    this.RaisePropertyChanged("FormingTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Priority {
+            get {
+                return this.PriorityField;
+            }
+            set {
+                if ((this.PriorityField.Equals(value) != true)) {
+                    this.PriorityField = value;
+                    this.RaisePropertyChanged("Priority");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MessageForESB", Namespace="http://schemas.datacontract.org/2004/07/IIS.Persona.ServiceBus.Objects")]
+    [System.SerializableAttribute()]
+    public partial class MessageForESB : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] AttachmentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BodyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ClientIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageTypeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PriorityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<string, string> TagsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Attachment {
+            get {
+                return this.AttachmentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttachmentField, value) != true)) {
+                    this.AttachmentField = value;
+                    this.RaisePropertyChanged("Attachment");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Body {
+            get {
+                return this.BodyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BodyField, value) != true)) {
+                    this.BodyField = value;
+                    this.RaisePropertyChanged("Body");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ClientID {
+            get {
+                return this.ClientIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ClientIDField, value) != true)) {
+                    this.ClientIDField = value;
+                    this.RaisePropertyChanged("ClientID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MessageTypeID {
+            get {
+                return this.MessageTypeIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageTypeIDField, value) != true)) {
+                    this.MessageTypeIDField = value;
+                    this.RaisePropertyChanged("MessageTypeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Priority {
+            get {
+                return this.PriorityField;
+            }
+            set {
+                if ((this.PriorityField.Equals(value) != true)) {
+                    this.PriorityField = value;
+                    this.RaisePropertyChanged("Priority");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<string, string> Tags {
+            get {
+                return this.TagsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TagsField, value) != true)) {
+                    this.TagsField = value;
+                    this.RaisePropertyChanged("Tags");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NameCommentStruct", Namespace="http://schemas.datacontract.org/2004/07/IIS.Persona.ServiceBus.Objects")]
+    [System.SerializableAttribute()]
+    public partial class NameCommentStruct : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string commentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.commentField, value) != true)) {
+                    this.commentField = value;
+                    this.RaisePropertyChanged("comment");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.idField, value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceBusServiceClient.IServiceBusService")]
+    public interface IServiceBusService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/CreateClient", ReplyAction="http://tempuri.org/IServiceBusService/CreateClientResponse")]
+        void CreateClient(string clientId, string name, string address);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/CreateClient", ReplyAction="http://tempuri.org/IServiceBusService/CreateClientResponse")]
+        System.Threading.Tasks.Task CreateClientAsync(string clientId, string name, string address);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/DeleteClient", ReplyAction="http://tempuri.org/IServiceBusService/DeleteClientResponse")]
+        void DeleteClient(string clientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/DeleteClient", ReplyAction="http://tempuri.org/IServiceBusService/DeleteClientResponse")]
+        System.Threading.Tasks.Task DeleteClientAsync(string clientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/DoesEventRisen", ReplyAction="http://tempuri.org/IServiceBusService/DoesEventRisenResponse")]
+        bool DoesEventRisen(string ClientID, string EventTypeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/DoesEventRisen", ReplyAction="http://tempuri.org/IServiceBusService/DoesEventRisenResponse")]
+        System.Threading.Tasks.Task<bool> DoesEventRisenAsync(string ClientID, string EventTypeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetCurrentMessageCount", ReplyAction="http://tempuri.org/IServiceBusService/GetCurrentMessageCountResponse")]
+        int GetCurrentMessageCount(string ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetCurrentMessageCount", ReplyAction="http://tempuri.org/IServiceBusService/GetCurrentMessageCountResponse")]
+        System.Threading.Tasks.Task<int> GetCurrentMessageCountAsync(string ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetCurrentThisTypeMessageCount", ReplyAction="http://tempuri.org/IServiceBusService/GetCurrentThisTypeMessageCountResponse")]
+        int GetCurrentThisTypeMessageCount(string ClientID, string MessageTypeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetCurrentThisTypeMessageCount", ReplyAction="http://tempuri.org/IServiceBusService/GetCurrentThisTypeMessageCountResponse")]
+        System.Threading.Tasks.Task<int> GetCurrentThisTypeMessageCountAsync(string ClientID, string MessageTypeID);
+        
+        // CODEGEN: Generating message contract since element name GetMessageFromESBResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageFromESB", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageFromESBResponse")]
+        MsgSender.ServiceBusServiceClient.GetMessageFromESBResponse GetMessageFromESB(MsgSender.ServiceBusServiceClient.GetMessageFromESBRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageFromESB", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageFromESBResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageFromESBResponse> GetMessageFromESBAsync(MsgSender.ServiceBusServiceClient.GetMessageFromESBRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetMessageInfoResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageInfo", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageInfoResponse")]
+        MsgSender.ServiceBusServiceClient.GetMessageInfoResponse GetMessageInfo(MsgSender.ServiceBusServiceClient.GetMessageInfoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageInfo", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageInfoResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageInfoResponse> GetMessageInfoAsync(MsgSender.ServiceBusServiceClient.GetMessageInfoRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetMessageWithGroupFromESBResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageWithGroupFromESB", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageWithGroupFromESBResponse")]
+        MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBResponse GetMessageWithGroupFromESB(MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageWithGroupFromESB", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageWithGroupFromESBResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBResponse> GetMessageWithGroupFromESBAsync(MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetMessageInfoWithGroupResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageInfoWithGroup", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageInfoWithGroupResponse")]
+        MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupResponse GetMessageInfoWithGroup(MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageInfoWithGroup", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageInfoWithGroupResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupResponse> GetMessageInfoWithGroupAsync(MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequest request);
+        
+        // CODEGEN: Generating message contract since element name tags from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageWithTagsFromESB", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageWithTagsFromESBResponse")]
+        MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBResponse GetMessageWithTagsFromESB(MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageWithTagsFromESB", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageWithTagsFromESBResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBResponse> GetMessageWithTagsFromESBAsync(MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequest request);
+        
+        // CODEGEN: Generating message contract since element name tags from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageInfoWithTags", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageInfoWithTagsResponse")]
+        MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsResponse GetMessageInfoWithTags(MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/GetMessageInfoWithTags", ReplyAction="http://tempuri.org/IServiceBusService/GetMessageInfoWithTagsResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsResponse> GetMessageInfoWithTagsAsync(MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/RiseEventOnESB", ReplyAction="http://tempuri.org/IServiceBusService/RiseEventOnESBResponse")]
+        void RiseEventOnESB(string ClientID, string EventTypeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/RiseEventOnESB", ReplyAction="http://tempuri.org/IServiceBusService/RiseEventOnESBResponse")]
+        System.Threading.Tasks.Task RiseEventOnESBAsync(string ClientID, string EventTypeID);
+        
+        // CODEGEN: Generating message contract since element name message from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/SendMessageToESB", ReplyAction="http://tempuri.org/IServiceBusService/SendMessageToESBResponse")]
+        MsgSender.ServiceBusServiceClient.SendMessageToESBResponse SendMessageToESB(MsgSender.ServiceBusServiceClient.SendMessageToESBRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/SendMessageToESB", ReplyAction="http://tempuri.org/IServiceBusService/SendMessageToESBResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.SendMessageToESBResponse> SendMessageToESBAsync(MsgSender.ServiceBusServiceClient.SendMessageToESBRequest request);
+        
+        // CODEGEN: Generating message contract since element name message from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/SendMessageToESBWithUseGroup", ReplyAction="http://tempuri.org/IServiceBusService/SendMessageToESBWithUseGroupResponse")]
+        MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupResponse SendMessageToESBWithUseGroup(MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/SendMessageToESBWithUseGroup", ReplyAction="http://tempuri.org/IServiceBusService/SendMessageToESBWithUseGroupResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupResponse> SendMessageToESBWithUseGroupAsync(MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/SubscribeClientForEventCallback", ReplyAction="http://tempuri.org/IServiceBusService/SubscribeClientForEventCallbackResponse")]
+        void SubscribeClientForEventCallback(string ClientID, string EventTypeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/SubscribeClientForEventCallback", ReplyAction="http://tempuri.org/IServiceBusService/SubscribeClientForEventCallbackResponse")]
+        System.Threading.Tasks.Task SubscribeClientForEventCallbackAsync(string ClientID, string EventTypeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/SubscribeClientForMessageCallback", ReplyAction="http://tempuri.org/IServiceBusService/SubscribeClientForMessageCallbackResponse")]
+        void SubscribeClientForMessageCallback(string ClientID, string MessageTypeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/SubscribeClientForMessageCallback", ReplyAction="http://tempuri.org/IServiceBusService/SubscribeClientForMessageCallbackResponse")]
+        System.Threading.Tasks.Task SubscribeClientForMessageCallbackAsync(string ClientID, string MessageTypeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/IsUp", ReplyAction="http://tempuri.org/IServiceBusService/IsUpResponse")]
+        bool IsUp();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusService/IsUp", ReplyAction="http://tempuri.org/IServiceBusService/IsUpResponse")]
+        System.Threading.Tasks.Task<bool> IsUpAsync();
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageFromESBRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageFromESB", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageFromESBRequestBody Body;
+        
+        public GetMessageFromESBRequest() {
+        }
+        
+        public GetMessageFromESBRequest(MsgSender.ServiceBusServiceClient.GetMessageFromESBRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageFromESBRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public string ClientID;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string MessageTypeID;
+        
+        public GetMessageFromESBRequestBody() {
+        }
+        
+        public GetMessageFromESBRequestBody(string ClientID, string MessageTypeID) {
+            this.ClientID = ClientID;
+            this.MessageTypeID = MessageTypeID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageFromESBResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageFromESBResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageFromESBResponseBody Body;
+        
+        public GetMessageFromESBResponse() {
+        }
+        
+        public GetMessageFromESBResponse(MsgSender.ServiceBusServiceClient.GetMessageFromESBResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageFromESBResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.MessageFromESB GetMessageFromESBResult;
+        
+        public GetMessageFromESBResponseBody() {
+        }
+        
+        public GetMessageFromESBResponseBody(MsgSender.ServiceBusServiceClient.MessageFromESB GetMessageFromESBResult) {
+            this.GetMessageFromESBResult = GetMessageFromESBResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageInfoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageInfo", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageInfoRequestBody Body;
+        
+        public GetMessageInfoRequest() {
+        }
+        
+        public GetMessageInfoRequest(MsgSender.ServiceBusServiceClient.GetMessageInfoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageInfoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public string clientId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string messageTypeId;
+        
+        public GetMessageInfoRequestBody() {
+        }
+        
+        public GetMessageInfoRequestBody(string clientId, string messageTypeId) {
+            this.clientId = clientId;
+            this.messageTypeId = messageTypeId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageInfoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageInfoResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageInfoResponseBody Body;
+        
+        public GetMessageInfoResponse() {
+        }
+        
+        public GetMessageInfoResponse(MsgSender.ServiceBusServiceClient.GetMessageInfoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageInfoResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.MessageOrderingInformation GetMessageInfoResult;
+        
+        public GetMessageInfoResponseBody() {
+        }
+        
+        public GetMessageInfoResponseBody(MsgSender.ServiceBusServiceClient.MessageOrderingInformation GetMessageInfoResult) {
+            this.GetMessageInfoResult = GetMessageInfoResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageWithGroupFromESBRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageWithGroupFromESB", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequestBody Body;
+        
+        public GetMessageWithGroupFromESBRequest() {
+        }
+        
+        public GetMessageWithGroupFromESBRequest(MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageWithGroupFromESBRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public string ClientID;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string MessageTypeID;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public string groupName;
+        
+        public GetMessageWithGroupFromESBRequestBody() {
+        }
+        
+        public GetMessageWithGroupFromESBRequestBody(string ClientID, string MessageTypeID, string groupName) {
+            this.ClientID = ClientID;
+            this.MessageTypeID = MessageTypeID;
+            this.groupName = groupName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageWithGroupFromESBResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageWithGroupFromESBResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBResponseBody Body;
+        
+        public GetMessageWithGroupFromESBResponse() {
+        }
+        
+        public GetMessageWithGroupFromESBResponse(MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageWithGroupFromESBResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.MessageFromESB GetMessageWithGroupFromESBResult;
+        
+        public GetMessageWithGroupFromESBResponseBody() {
+        }
+        
+        public GetMessageWithGroupFromESBResponseBody(MsgSender.ServiceBusServiceClient.MessageFromESB GetMessageWithGroupFromESBResult) {
+            this.GetMessageWithGroupFromESBResult = GetMessageWithGroupFromESBResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageInfoWithGroupRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageInfoWithGroup", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequestBody Body;
+        
+        public GetMessageInfoWithGroupRequest() {
+        }
+        
+        public GetMessageInfoWithGroupRequest(MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageInfoWithGroupRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public string clientId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string messageTypeId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public string groupName;
+        
+        public GetMessageInfoWithGroupRequestBody() {
+        }
+        
+        public GetMessageInfoWithGroupRequestBody(string clientId, string messageTypeId, string groupName) {
+            this.clientId = clientId;
+            this.messageTypeId = messageTypeId;
+            this.groupName = groupName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageInfoWithGroupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageInfoWithGroupResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupResponseBody Body;
+        
+        public GetMessageInfoWithGroupResponse() {
+        }
+        
+        public GetMessageInfoWithGroupResponse(MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageInfoWithGroupResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.MessageOrderingInformation GetMessageInfoWithGroupResult;
+        
+        public GetMessageInfoWithGroupResponseBody() {
+        }
+        
+        public GetMessageInfoWithGroupResponseBody(MsgSender.ServiceBusServiceClient.MessageOrderingInformation GetMessageInfoWithGroupResult) {
+            this.GetMessageInfoWithGroupResult = GetMessageInfoWithGroupResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageWithTagsFromESBRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageWithTagsFromESB", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequestBody Body;
+        
+        public GetMessageWithTagsFromESBRequest() {
+        }
+        
+        public GetMessageWithTagsFromESBRequest(MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageWithTagsFromESBRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public string clientId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string messageTypeId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string[] tags;
+        
+        public GetMessageWithTagsFromESBRequestBody() {
+        }
+        
+        public GetMessageWithTagsFromESBRequestBody(string clientId, string messageTypeId, string[] tags) {
+            this.clientId = clientId;
+            this.messageTypeId = messageTypeId;
+            this.tags = tags;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageWithTagsFromESBResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageWithTagsFromESBResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBResponseBody Body;
+        
+        public GetMessageWithTagsFromESBResponse() {
+        }
+        
+        public GetMessageWithTagsFromESBResponse(MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageWithTagsFromESBResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.MessageFromESB GetMessageWithTagsFromESBResult;
+        
+        public GetMessageWithTagsFromESBResponseBody() {
+        }
+        
+        public GetMessageWithTagsFromESBResponseBody(MsgSender.ServiceBusServiceClient.MessageFromESB GetMessageWithTagsFromESBResult) {
+            this.GetMessageWithTagsFromESBResult = GetMessageWithTagsFromESBResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageInfoWithTagsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageInfoWithTags", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequestBody Body;
+        
+        public GetMessageInfoWithTagsRequest() {
+        }
+        
+        public GetMessageInfoWithTagsRequest(MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageInfoWithTagsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public string clientId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string messageTypeId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string[] tags;
+        
+        public GetMessageInfoWithTagsRequestBody() {
+        }
+        
+        public GetMessageInfoWithTagsRequestBody(string clientId, string messageTypeId, string[] tags) {
+            this.clientId = clientId;
+            this.messageTypeId = messageTypeId;
+            this.tags = tags;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMessageInfoWithTagsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageInfoWithTagsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsResponseBody Body;
+        
+        public GetMessageInfoWithTagsResponse() {
+        }
+        
+        public GetMessageInfoWithTagsResponse(MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessageInfoWithTagsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.MessageOrderingInformation GetMessageInfoWithTagsResult;
+        
+        public GetMessageInfoWithTagsResponseBody() {
+        }
+        
+        public GetMessageInfoWithTagsResponseBody(MsgSender.ServiceBusServiceClient.MessageOrderingInformation GetMessageInfoWithTagsResult) {
+            this.GetMessageInfoWithTagsResult = GetMessageInfoWithTagsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SendMessageToESBRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SendMessageToESB", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.SendMessageToESBRequestBody Body;
+        
+        public SendMessageToESBRequest() {
+        }
+        
+        public SendMessageToESBRequest(MsgSender.ServiceBusServiceClient.SendMessageToESBRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class SendMessageToESBRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.MessageForESB message;
+        
+        public SendMessageToESBRequestBody() {
+        }
+        
+        public SendMessageToESBRequestBody(MsgSender.ServiceBusServiceClient.MessageForESB message) {
+            this.message = message;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SendMessageToESBResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SendMessageToESBResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.SendMessageToESBResponseBody Body;
+        
+        public SendMessageToESBResponse() {
+        }
+        
+        public SendMessageToESBResponse(MsgSender.ServiceBusServiceClient.SendMessageToESBResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class SendMessageToESBResponseBody {
+        
+        public SendMessageToESBResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SendMessageToESBWithUseGroupRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SendMessageToESBWithUseGroup", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequestBody Body;
+        
+        public SendMessageToESBWithUseGroupRequest() {
+        }
+        
+        public SendMessageToESBWithUseGroupRequest(MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class SendMessageToESBWithUseGroupRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.MessageForESB message;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string groupName;
+        
+        public SendMessageToESBWithUseGroupRequestBody() {
+        }
+        
+        public SendMessageToESBWithUseGroupRequestBody(MsgSender.ServiceBusServiceClient.MessageForESB message, string groupName) {
+            this.message = message;
+            this.groupName = groupName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SendMessageToESBWithUseGroupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SendMessageToESBWithUseGroupResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupResponseBody Body;
+        
+        public SendMessageToESBWithUseGroupResponse() {
+        }
+        
+        public SendMessageToESBWithUseGroupResponse(MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class SendMessageToESBWithUseGroupResponseBody {
+        
+        public SendMessageToESBWithUseGroupResponseBody() {
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IServiceBusServiceChannel : MsgSender.ServiceBusServiceClient.IServiceBusService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ServiceBusServiceClient : System.ServiceModel.ClientBase<MsgSender.ServiceBusServiceClient.IServiceBusService>, MsgSender.ServiceBusServiceClient.IServiceBusService {
+        
+        public ServiceBusServiceClient() {
+        }
+        
+        public ServiceBusServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public ServiceBusServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ServiceBusServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ServiceBusServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public void CreateClient(string clientId, string name, string address) {
+            base.Channel.CreateClient(clientId, name, address);
+        }
+        
+        public System.Threading.Tasks.Task CreateClientAsync(string clientId, string name, string address) {
+            return base.Channel.CreateClientAsync(clientId, name, address);
+        }
+        
+        public void DeleteClient(string clientId) {
+            base.Channel.DeleteClient(clientId);
+        }
+        
+        public System.Threading.Tasks.Task DeleteClientAsync(string clientId) {
+            return base.Channel.DeleteClientAsync(clientId);
+        }
+        
+        public bool DoesEventRisen(string ClientID, string EventTypeID) {
+            return base.Channel.DoesEventRisen(ClientID, EventTypeID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DoesEventRisenAsync(string ClientID, string EventTypeID) {
+            return base.Channel.DoesEventRisenAsync(ClientID, EventTypeID);
+        }
+        
+        public int GetCurrentMessageCount(string ClientID) {
+            return base.Channel.GetCurrentMessageCount(ClientID);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetCurrentMessageCountAsync(string ClientID) {
+            return base.Channel.GetCurrentMessageCountAsync(ClientID);
+        }
+        
+        public int GetCurrentThisTypeMessageCount(string ClientID, string MessageTypeID) {
+            return base.Channel.GetCurrentThisTypeMessageCount(ClientID, MessageTypeID);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetCurrentThisTypeMessageCountAsync(string ClientID, string MessageTypeID) {
+            return base.Channel.GetCurrentThisTypeMessageCountAsync(ClientID, MessageTypeID);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.GetMessageFromESBResponse MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageFromESB(MsgSender.ServiceBusServiceClient.GetMessageFromESBRequest request) {
+            return base.Channel.GetMessageFromESB(request);
+        }
+        
+        public MsgSender.ServiceBusServiceClient.MessageFromESB GetMessageFromESB(string ClientID, string MessageTypeID) {
+            MsgSender.ServiceBusServiceClient.GetMessageFromESBRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageFromESBRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageFromESBRequestBody();
+            inValue.Body.ClientID = ClientID;
+            inValue.Body.MessageTypeID = MessageTypeID;
+            MsgSender.ServiceBusServiceClient.GetMessageFromESBResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageFromESB(inValue);
+            return retVal.Body.GetMessageFromESBResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageFromESBResponse> MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageFromESBAsync(MsgSender.ServiceBusServiceClient.GetMessageFromESBRequest request) {
+            return base.Channel.GetMessageFromESBAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageFromESBResponse> GetMessageFromESBAsync(string ClientID, string MessageTypeID) {
+            MsgSender.ServiceBusServiceClient.GetMessageFromESBRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageFromESBRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageFromESBRequestBody();
+            inValue.Body.ClientID = ClientID;
+            inValue.Body.MessageTypeID = MessageTypeID;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageFromESBAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.GetMessageInfoResponse MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageInfo(MsgSender.ServiceBusServiceClient.GetMessageInfoRequest request) {
+            return base.Channel.GetMessageInfo(request);
+        }
+        
+        public MsgSender.ServiceBusServiceClient.MessageOrderingInformation GetMessageInfo(string clientId, string messageTypeId) {
+            MsgSender.ServiceBusServiceClient.GetMessageInfoRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageInfoRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageInfoRequestBody();
+            inValue.Body.clientId = clientId;
+            inValue.Body.messageTypeId = messageTypeId;
+            MsgSender.ServiceBusServiceClient.GetMessageInfoResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageInfo(inValue);
+            return retVal.Body.GetMessageInfoResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageInfoResponse> MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageInfoAsync(MsgSender.ServiceBusServiceClient.GetMessageInfoRequest request) {
+            return base.Channel.GetMessageInfoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageInfoResponse> GetMessageInfoAsync(string clientId, string messageTypeId) {
+            MsgSender.ServiceBusServiceClient.GetMessageInfoRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageInfoRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageInfoRequestBody();
+            inValue.Body.clientId = clientId;
+            inValue.Body.messageTypeId = messageTypeId;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageInfoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBResponse MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageWithGroupFromESB(MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequest request) {
+            return base.Channel.GetMessageWithGroupFromESB(request);
+        }
+        
+        public MsgSender.ServiceBusServiceClient.MessageFromESB GetMessageWithGroupFromESB(string ClientID, string MessageTypeID, string groupName) {
+            MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequestBody();
+            inValue.Body.ClientID = ClientID;
+            inValue.Body.MessageTypeID = MessageTypeID;
+            inValue.Body.groupName = groupName;
+            MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageWithGroupFromESB(inValue);
+            return retVal.Body.GetMessageWithGroupFromESBResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBResponse> MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageWithGroupFromESBAsync(MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequest request) {
+            return base.Channel.GetMessageWithGroupFromESBAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBResponse> GetMessageWithGroupFromESBAsync(string ClientID, string MessageTypeID, string groupName) {
+            MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageWithGroupFromESBRequestBody();
+            inValue.Body.ClientID = ClientID;
+            inValue.Body.MessageTypeID = MessageTypeID;
+            inValue.Body.groupName = groupName;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageWithGroupFromESBAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupResponse MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageInfoWithGroup(MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequest request) {
+            return base.Channel.GetMessageInfoWithGroup(request);
+        }
+        
+        public MsgSender.ServiceBusServiceClient.MessageOrderingInformation GetMessageInfoWithGroup(string clientId, string messageTypeId, string groupName) {
+            MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequestBody();
+            inValue.Body.clientId = clientId;
+            inValue.Body.messageTypeId = messageTypeId;
+            inValue.Body.groupName = groupName;
+            MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageInfoWithGroup(inValue);
+            return retVal.Body.GetMessageInfoWithGroupResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupResponse> MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageInfoWithGroupAsync(MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequest request) {
+            return base.Channel.GetMessageInfoWithGroupAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupResponse> GetMessageInfoWithGroupAsync(string clientId, string messageTypeId, string groupName) {
+            MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageInfoWithGroupRequestBody();
+            inValue.Body.clientId = clientId;
+            inValue.Body.messageTypeId = messageTypeId;
+            inValue.Body.groupName = groupName;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageInfoWithGroupAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBResponse MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageWithTagsFromESB(MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequest request) {
+            return base.Channel.GetMessageWithTagsFromESB(request);
+        }
+        
+        public MsgSender.ServiceBusServiceClient.MessageFromESB GetMessageWithTagsFromESB(string clientId, string messageTypeId, string[] tags) {
+            MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequestBody();
+            inValue.Body.clientId = clientId;
+            inValue.Body.messageTypeId = messageTypeId;
+            inValue.Body.tags = tags;
+            MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageWithTagsFromESB(inValue);
+            return retVal.Body.GetMessageWithTagsFromESBResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBResponse> MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageWithTagsFromESBAsync(MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequest request) {
+            return base.Channel.GetMessageWithTagsFromESBAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBResponse> GetMessageWithTagsFromESBAsync(string clientId, string messageTypeId, string[] tags) {
+            MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageWithTagsFromESBRequestBody();
+            inValue.Body.clientId = clientId;
+            inValue.Body.messageTypeId = messageTypeId;
+            inValue.Body.tags = tags;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageWithTagsFromESBAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsResponse MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageInfoWithTags(MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequest request) {
+            return base.Channel.GetMessageInfoWithTags(request);
+        }
+        
+        public MsgSender.ServiceBusServiceClient.MessageOrderingInformation GetMessageInfoWithTags(string clientId, string messageTypeId, string[] tags) {
+            MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequestBody();
+            inValue.Body.clientId = clientId;
+            inValue.Body.messageTypeId = messageTypeId;
+            inValue.Body.tags = tags;
+            MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageInfoWithTags(inValue);
+            return retVal.Body.GetMessageInfoWithTagsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsResponse> MsgSender.ServiceBusServiceClient.IServiceBusService.GetMessageInfoWithTagsAsync(MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequest request) {
+            return base.Channel.GetMessageInfoWithTagsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsResponse> GetMessageInfoWithTagsAsync(string clientId, string messageTypeId, string[] tags) {
+            MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequest inValue = new MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMessageInfoWithTagsRequestBody();
+            inValue.Body.clientId = clientId;
+            inValue.Body.messageTypeId = messageTypeId;
+            inValue.Body.tags = tags;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).GetMessageInfoWithTagsAsync(inValue);
+        }
+        
+        public void RiseEventOnESB(string ClientID, string EventTypeID) {
+            base.Channel.RiseEventOnESB(ClientID, EventTypeID);
+        }
+        
+        public System.Threading.Tasks.Task RiseEventOnESBAsync(string ClientID, string EventTypeID) {
+            return base.Channel.RiseEventOnESBAsync(ClientID, EventTypeID);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.SendMessageToESBResponse MsgSender.ServiceBusServiceClient.IServiceBusService.SendMessageToESB(MsgSender.ServiceBusServiceClient.SendMessageToESBRequest request) {
+            return base.Channel.SendMessageToESB(request);
+        }
+        
+        public void SendMessageToESB(MsgSender.ServiceBusServiceClient.MessageForESB message) {
+            MsgSender.ServiceBusServiceClient.SendMessageToESBRequest inValue = new MsgSender.ServiceBusServiceClient.SendMessageToESBRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.SendMessageToESBRequestBody();
+            inValue.Body.message = message;
+            MsgSender.ServiceBusServiceClient.SendMessageToESBResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).SendMessageToESB(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.SendMessageToESBResponse> MsgSender.ServiceBusServiceClient.IServiceBusService.SendMessageToESBAsync(MsgSender.ServiceBusServiceClient.SendMessageToESBRequest request) {
+            return base.Channel.SendMessageToESBAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.SendMessageToESBResponse> SendMessageToESBAsync(MsgSender.ServiceBusServiceClient.MessageForESB message) {
+            MsgSender.ServiceBusServiceClient.SendMessageToESBRequest inValue = new MsgSender.ServiceBusServiceClient.SendMessageToESBRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.SendMessageToESBRequestBody();
+            inValue.Body.message = message;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).SendMessageToESBAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupResponse MsgSender.ServiceBusServiceClient.IServiceBusService.SendMessageToESBWithUseGroup(MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequest request) {
+            return base.Channel.SendMessageToESBWithUseGroup(request);
+        }
+        
+        public void SendMessageToESBWithUseGroup(MsgSender.ServiceBusServiceClient.MessageForESB message, string groupName) {
+            MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequest inValue = new MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequestBody();
+            inValue.Body.message = message;
+            inValue.Body.groupName = groupName;
+            MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).SendMessageToESBWithUseGroup(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupResponse> MsgSender.ServiceBusServiceClient.IServiceBusService.SendMessageToESBWithUseGroupAsync(MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequest request) {
+            return base.Channel.SendMessageToESBWithUseGroupAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupResponse> SendMessageToESBWithUseGroupAsync(MsgSender.ServiceBusServiceClient.MessageForESB message, string groupName) {
+            MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequest inValue = new MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.SendMessageToESBWithUseGroupRequestBody();
+            inValue.Body.message = message;
+            inValue.Body.groupName = groupName;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusService)(this)).SendMessageToESBWithUseGroupAsync(inValue);
+        }
+        
+        public void SubscribeClientForEventCallback(string ClientID, string EventTypeID) {
+            base.Channel.SubscribeClientForEventCallback(ClientID, EventTypeID);
+        }
+        
+        public System.Threading.Tasks.Task SubscribeClientForEventCallbackAsync(string ClientID, string EventTypeID) {
+            return base.Channel.SubscribeClientForEventCallbackAsync(ClientID, EventTypeID);
+        }
+        
+        public void SubscribeClientForMessageCallback(string ClientID, string MessageTypeID) {
+            base.Channel.SubscribeClientForMessageCallback(ClientID, MessageTypeID);
+        }
+        
+        public System.Threading.Tasks.Task SubscribeClientForMessageCallbackAsync(string ClientID, string MessageTypeID) {
+            return base.Channel.SubscribeClientForMessageCallbackAsync(ClientID, MessageTypeID);
+        }
+        
+        public bool IsUp() {
+            return base.Channel.IsUp();
+        }
+        
+        public System.Threading.Tasks.Task<bool> IsUpAsync() {
+            return base.Channel.IsUpAsync();
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceBusServiceClient.IServiceBusInterop")]
+    public interface IServiceBusInterop {
+        
+        // CODEGEN: Generating message contract since element name evntType from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/AddNewEvntType", ReplyAction="http://tempuri.org/IServiceBusInterop/AddNewEvntTypeResponse")]
+        MsgSender.ServiceBusServiceClient.AddNewEvntTypeResponse AddNewEvntType(MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/AddNewEvntType", ReplyAction="http://tempuri.org/IServiceBusInterop/AddNewEvntTypeResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.AddNewEvntTypeResponse> AddNewEvntTypeAsync(MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequest request);
+        
+        // CODEGEN: Generating message contract since element name msgType from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/AddNewMsgType", ReplyAction="http://tempuri.org/IServiceBusInterop/AddNewMsgTypeResponse")]
+        MsgSender.ServiceBusServiceClient.AddNewMsgTypeResponse AddNewMsgType(MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/AddNewMsgType", ReplyAction="http://tempuri.org/IServiceBusInterop/AddNewMsgTypeResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.AddNewMsgTypeResponse> AddNewMsgTypeAsync(MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetEvntTypesFromBusResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/GetEvntTypesFromBus", ReplyAction="http://tempuri.org/IServiceBusInterop/GetEvntTypesFromBusResponse")]
+        MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusResponse GetEvntTypesFromBus(MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/GetEvntTypesFromBus", ReplyAction="http://tempuri.org/IServiceBusInterop/GetEvntTypesFromBusResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusResponse> GetEvntTypesFromBusAsync(MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetMsgTypesFromBusResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/GetMsgTypesFromBus", ReplyAction="http://tempuri.org/IServiceBusInterop/GetMsgTypesFromBusResponse")]
+        MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusResponse GetMsgTypesFromBus(MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/GetMsgTypesFromBus", ReplyAction="http://tempuri.org/IServiceBusInterop/GetMsgTypesFromBusResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusResponse> GetMsgTypesFromBusAsync(MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForEvnts", ReplyAction="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForEvntsResponse")]
+        void UpdateClientSubscribesForEvnts(string ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForEvnts", ReplyAction="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForEvntsResponse")]
+        System.Threading.Tasks.Task UpdateClientSubscribesForEvntsAsync(string ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForMsgs", ReplyAction="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForMsgsResponse")]
+        void UpdateClientSubscribesForMsgs(string ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForMsgs", ReplyAction="http://tempuri.org/IServiceBusInterop/UpdateClientSubscribesForMsgsResponse")]
+        System.Threading.Tasks.Task UpdateClientSubscribesForMsgsAsync(string ClientID);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddNewEvntTypeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddNewEvntType", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequestBody Body;
+        
+        public AddNewEvntTypeRequest() {
+        }
+        
+        public AddNewEvntTypeRequest(MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddNewEvntTypeRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.NameCommentStruct evntType;
+        
+        public AddNewEvntTypeRequestBody() {
+        }
+        
+        public AddNewEvntTypeRequestBody(MsgSender.ServiceBusServiceClient.NameCommentStruct evntType) {
+            this.evntType = evntType;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddNewEvntTypeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddNewEvntTypeResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.AddNewEvntTypeResponseBody Body;
+        
+        public AddNewEvntTypeResponse() {
+        }
+        
+        public AddNewEvntTypeResponse(MsgSender.ServiceBusServiceClient.AddNewEvntTypeResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class AddNewEvntTypeResponseBody {
+        
+        public AddNewEvntTypeResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddNewMsgTypeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddNewMsgType", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequestBody Body;
+        
+        public AddNewMsgTypeRequest() {
+        }
+        
+        public AddNewMsgTypeRequest(MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddNewMsgTypeRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.NameCommentStruct msgType;
+        
+        public AddNewMsgTypeRequestBody() {
+        }
+        
+        public AddNewMsgTypeRequestBody(MsgSender.ServiceBusServiceClient.NameCommentStruct msgType) {
+            this.msgType = msgType;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddNewMsgTypeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddNewMsgTypeResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.AddNewMsgTypeResponseBody Body;
+        
+        public AddNewMsgTypeResponse() {
+        }
+        
+        public AddNewMsgTypeResponse(MsgSender.ServiceBusServiceClient.AddNewMsgTypeResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class AddNewMsgTypeResponseBody {
+        
+        public AddNewMsgTypeResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEvntTypesFromBusRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEvntTypesFromBus", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequestBody Body;
+        
+        public GetEvntTypesFromBusRequest() {
+        }
+        
+        public GetEvntTypesFromBusRequest(MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetEvntTypesFromBusRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public string ClientID;
+        
+        public GetEvntTypesFromBusRequestBody() {
+        }
+        
+        public GetEvntTypesFromBusRequestBody(string ClientID) {
+            this.ClientID = ClientID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEvntTypesFromBusResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEvntTypesFromBusResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusResponseBody Body;
+        
+        public GetEvntTypesFromBusResponse() {
+        }
+        
+        public GetEvntTypesFromBusResponse(MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetEvntTypesFromBusResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.NameCommentStruct[] GetEvntTypesFromBusResult;
+        
+        public GetEvntTypesFromBusResponseBody() {
+        }
+        
+        public GetEvntTypesFromBusResponseBody(MsgSender.ServiceBusServiceClient.NameCommentStruct[] GetEvntTypesFromBusResult) {
+            this.GetEvntTypesFromBusResult = GetEvntTypesFromBusResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMsgTypesFromBusRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMsgTypesFromBus", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequestBody Body;
+        
+        public GetMsgTypesFromBusRequest() {
+        }
+        
+        public GetMsgTypesFromBusRequest(MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMsgTypesFromBusRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public string ClientID;
+        
+        public GetMsgTypesFromBusRequestBody() {
+        }
+        
+        public GetMsgTypesFromBusRequestBody(string ClientID) {
+            this.ClientID = ClientID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMsgTypesFromBusResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMsgTypesFromBusResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusResponseBody Body;
+        
+        public GetMsgTypesFromBusResponse() {
+        }
+        
+        public GetMsgTypesFromBusResponse(MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMsgTypesFromBusResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.NameCommentStruct[] GetMsgTypesFromBusResult;
+        
+        public GetMsgTypesFromBusResponseBody() {
+        }
+        
+        public GetMsgTypesFromBusResponseBody(MsgSender.ServiceBusServiceClient.NameCommentStruct[] GetMsgTypesFromBusResult) {
+            this.GetMsgTypesFromBusResult = GetMsgTypesFromBusResult;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IServiceBusInteropChannel : MsgSender.ServiceBusServiceClient.IServiceBusInterop, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ServiceBusInteropClient : System.ServiceModel.ClientBase<MsgSender.ServiceBusServiceClient.IServiceBusInterop>, MsgSender.ServiceBusServiceClient.IServiceBusInterop {
+        
+        public ServiceBusInteropClient() {
+        }
+        
+        public ServiceBusInteropClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public ServiceBusInteropClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ServiceBusInteropClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ServiceBusInteropClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.AddNewEvntTypeResponse MsgSender.ServiceBusServiceClient.IServiceBusInterop.AddNewEvntType(MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequest request) {
+            return base.Channel.AddNewEvntType(request);
+        }
+        
+        public void AddNewEvntType(MsgSender.ServiceBusServiceClient.NameCommentStruct evntType) {
+            MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequest inValue = new MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequestBody();
+            inValue.Body.evntType = evntType;
+            MsgSender.ServiceBusServiceClient.AddNewEvntTypeResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusInterop)(this)).AddNewEvntType(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.AddNewEvntTypeResponse> MsgSender.ServiceBusServiceClient.IServiceBusInterop.AddNewEvntTypeAsync(MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequest request) {
+            return base.Channel.AddNewEvntTypeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.AddNewEvntTypeResponse> AddNewEvntTypeAsync(MsgSender.ServiceBusServiceClient.NameCommentStruct evntType) {
+            MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequest inValue = new MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.AddNewEvntTypeRequestBody();
+            inValue.Body.evntType = evntType;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusInterop)(this)).AddNewEvntTypeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.AddNewMsgTypeResponse MsgSender.ServiceBusServiceClient.IServiceBusInterop.AddNewMsgType(MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequest request) {
+            return base.Channel.AddNewMsgType(request);
+        }
+        
+        public void AddNewMsgType(MsgSender.ServiceBusServiceClient.NameCommentStruct msgType) {
+            MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequest inValue = new MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequestBody();
+            inValue.Body.msgType = msgType;
+            MsgSender.ServiceBusServiceClient.AddNewMsgTypeResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusInterop)(this)).AddNewMsgType(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.AddNewMsgTypeResponse> MsgSender.ServiceBusServiceClient.IServiceBusInterop.AddNewMsgTypeAsync(MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequest request) {
+            return base.Channel.AddNewMsgTypeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.AddNewMsgTypeResponse> AddNewMsgTypeAsync(MsgSender.ServiceBusServiceClient.NameCommentStruct msgType) {
+            MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequest inValue = new MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.AddNewMsgTypeRequestBody();
+            inValue.Body.msgType = msgType;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusInterop)(this)).AddNewMsgTypeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusResponse MsgSender.ServiceBusServiceClient.IServiceBusInterop.GetEvntTypesFromBus(MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequest request) {
+            return base.Channel.GetEvntTypesFromBus(request);
+        }
+        
+        public MsgSender.ServiceBusServiceClient.NameCommentStruct[] GetEvntTypesFromBus(string ClientID) {
+            MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequest inValue = new MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequestBody();
+            inValue.Body.ClientID = ClientID;
+            MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusInterop)(this)).GetEvntTypesFromBus(inValue);
+            return retVal.Body.GetEvntTypesFromBusResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusResponse> MsgSender.ServiceBusServiceClient.IServiceBusInterop.GetEvntTypesFromBusAsync(MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequest request) {
+            return base.Channel.GetEvntTypesFromBusAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusResponse> GetEvntTypesFromBusAsync(string ClientID) {
+            MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequest inValue = new MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetEvntTypesFromBusRequestBody();
+            inValue.Body.ClientID = ClientID;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusInterop)(this)).GetEvntTypesFromBusAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusResponse MsgSender.ServiceBusServiceClient.IServiceBusInterop.GetMsgTypesFromBus(MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequest request) {
+            return base.Channel.GetMsgTypesFromBus(request);
+        }
+        
+        public MsgSender.ServiceBusServiceClient.NameCommentStruct[] GetMsgTypesFromBus(string ClientID) {
+            MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequest inValue = new MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequestBody();
+            inValue.Body.ClientID = ClientID;
+            MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusResponse retVal = ((MsgSender.ServiceBusServiceClient.IServiceBusInterop)(this)).GetMsgTypesFromBus(inValue);
+            return retVal.Body.GetMsgTypesFromBusResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusResponse> MsgSender.ServiceBusServiceClient.IServiceBusInterop.GetMsgTypesFromBusAsync(MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequest request) {
+            return base.Channel.GetMsgTypesFromBusAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusResponse> GetMsgTypesFromBusAsync(string ClientID) {
+            MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequest inValue = new MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.GetMsgTypesFromBusRequestBody();
+            inValue.Body.ClientID = ClientID;
+            return ((MsgSender.ServiceBusServiceClient.IServiceBusInterop)(this)).GetMsgTypesFromBusAsync(inValue);
+        }
+        
+        public void UpdateClientSubscribesForEvnts(string ClientID) {
+            base.Channel.UpdateClientSubscribesForEvnts(ClientID);
+        }
+        
+        public System.Threading.Tasks.Task UpdateClientSubscribesForEvntsAsync(string ClientID) {
+            return base.Channel.UpdateClientSubscribesForEvntsAsync(ClientID);
+        }
+        
+        public void UpdateClientSubscribesForMsgs(string ClientID) {
+            base.Channel.UpdateClientSubscribesForMsgs(ClientID);
+        }
+        
+        public System.Threading.Tasks.Task UpdateClientSubscribesForMsgsAsync(string ClientID) {
+            return base.Channel.UpdateClientSubscribesForMsgsAsync(ClientID);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceBusServiceClient.ICallbackSubscriber")]
+    public interface ICallbackSubscriber {
+        
+        // CODEGEN: Generating message contract since element name msg from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICallbackSubscriber/AcceptMessage", ReplyAction="http://tempuri.org/ICallbackSubscriber/AcceptMessageResponse")]
+        MsgSender.ServiceBusServiceClient.AcceptMessageResponse AcceptMessage(MsgSender.ServiceBusServiceClient.AcceptMessageRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICallbackSubscriber/AcceptMessage", ReplyAction="http://tempuri.org/ICallbackSubscriber/AcceptMessageResponse")]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.AcceptMessageResponse> AcceptMessageAsync(MsgSender.ServiceBusServiceClient.AcceptMessageRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICallbackSubscriber/RiseEvent", ReplyAction="http://tempuri.org/ICallbackSubscriber/RiseEventResponse")]
+        void RiseEvent(string ИдТипаСобытия);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICallbackSubscriber/RiseEvent", ReplyAction="http://tempuri.org/ICallbackSubscriber/RiseEventResponse")]
+        System.Threading.Tasks.Task RiseEventAsync(string ИдТипаСобытия);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICallbackSubscriber/GetSourceId", ReplyAction="http://tempuri.org/ICallbackSubscriber/GetSourceIdResponse")]
+        string GetSourceId();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICallbackSubscriber/GetSourceId", ReplyAction="http://tempuri.org/ICallbackSubscriber/GetSourceIdResponse")]
+        System.Threading.Tasks.Task<string> GetSourceIdAsync();
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AcceptMessageRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AcceptMessage", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.AcceptMessageRequestBody Body;
+        
+        public AcceptMessageRequest() {
+        }
+        
+        public AcceptMessageRequest(MsgSender.ServiceBusServiceClient.AcceptMessageRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AcceptMessageRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public MsgSender.ServiceBusServiceClient.MessageFromESB msg;
+        
+        public AcceptMessageRequestBody() {
+        }
+        
+        public AcceptMessageRequestBody(MsgSender.ServiceBusServiceClient.MessageFromESB msg) {
+            this.msg = msg;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AcceptMessageResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AcceptMessageResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MsgSender.ServiceBusServiceClient.AcceptMessageResponseBody Body;
+        
+        public AcceptMessageResponse() {
+        }
+        
+        public AcceptMessageResponse(MsgSender.ServiceBusServiceClient.AcceptMessageResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class AcceptMessageResponseBody {
+        
+        public AcceptMessageResponseBody() {
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ICallbackSubscriberChannel : MsgSender.ServiceBusServiceClient.ICallbackSubscriber, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CallbackSubscriberClient : System.ServiceModel.ClientBase<MsgSender.ServiceBusServiceClient.ICallbackSubscriber>, MsgSender.ServiceBusServiceClient.ICallbackSubscriber {
+        
+        public CallbackSubscriberClient() {
+        }
+        
+        public CallbackSubscriberClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public CallbackSubscriberClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public CallbackSubscriberClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public CallbackSubscriberClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MsgSender.ServiceBusServiceClient.AcceptMessageResponse MsgSender.ServiceBusServiceClient.ICallbackSubscriber.AcceptMessage(MsgSender.ServiceBusServiceClient.AcceptMessageRequest request) {
+            return base.Channel.AcceptMessage(request);
+        }
+        
+        public void AcceptMessage(MsgSender.ServiceBusServiceClient.MessageFromESB msg) {
+            MsgSender.ServiceBusServiceClient.AcceptMessageRequest inValue = new MsgSender.ServiceBusServiceClient.AcceptMessageRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.AcceptMessageRequestBody();
+            inValue.Body.msg = msg;
+            MsgSender.ServiceBusServiceClient.AcceptMessageResponse retVal = ((MsgSender.ServiceBusServiceClient.ICallbackSubscriber)(this)).AcceptMessage(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.AcceptMessageResponse> MsgSender.ServiceBusServiceClient.ICallbackSubscriber.AcceptMessageAsync(MsgSender.ServiceBusServiceClient.AcceptMessageRequest request) {
+            return base.Channel.AcceptMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MsgSender.ServiceBusServiceClient.AcceptMessageResponse> AcceptMessageAsync(MsgSender.ServiceBusServiceClient.MessageFromESB msg) {
+            MsgSender.ServiceBusServiceClient.AcceptMessageRequest inValue = new MsgSender.ServiceBusServiceClient.AcceptMessageRequest();
+            inValue.Body = new MsgSender.ServiceBusServiceClient.AcceptMessageRequestBody();
+            inValue.Body.msg = msg;
+            return ((MsgSender.ServiceBusServiceClient.ICallbackSubscriber)(this)).AcceptMessageAsync(inValue);
+        }
+        
+        public void RiseEvent(string ИдТипаСобытия) {
+            base.Channel.RiseEvent(ИдТипаСобытия);
+        }
+        
+        public System.Threading.Tasks.Task RiseEventAsync(string ИдТипаСобытия) {
+            return base.Channel.RiseEventAsync(ИдТипаСобытия);
+        }
+        
+        public string GetSourceId() {
+            return base.Channel.GetSourceId();
+        }
+        
+        public System.Threading.Tasks.Task<string> GetSourceIdAsync() {
+            return base.Channel.GetSourceIdAsync();
+        }
+    }
+}
