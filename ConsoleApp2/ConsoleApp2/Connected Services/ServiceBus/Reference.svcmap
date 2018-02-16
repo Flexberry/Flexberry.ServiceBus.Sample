@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="337cbecb-97c9-4d57-b563-8ffe97188d39" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7075/HighwaySBMonoPostgreSQLWcfService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService.xsd" MetadataType="Schema" ID="6c578ff8-9b3c-4185-96eb-d90bdd0073dc" SourceId="1" SourceUrl="http://localhost:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd3" />
+    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService1.xsd" MetadataType="Schema" ID="b95c8d44-f34e-4650-92b0-0109cd3fe99f" SourceId="1" SourceUrl="http://localhost:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd2" />
+    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService2.xsd" MetadataType="Schema" ID="9ec762fa-d63f-4529-b57b-d12f036f4d7e" SourceId="1" SourceUrl="http://localhost:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd1" />
+    <MetadataFile FileName="HighwaySBMonoPostgreSQLWcfService3.xsd" MetadataType="Schema" ID="46b7d8d1-b3cc-4041-a9dc-5d5c0fe9f3c5" SourceId="1" SourceUrl="http://localhost:7075/HighwaySBMonoPostgreSQLWcfService?xsd=xsd0" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="ad544bff-8598-49be-8480-f85833b2312d" SourceId="1" SourceUrl="http://localhost:7075/HighwaySBMonoPostgreSQLWcfService" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
