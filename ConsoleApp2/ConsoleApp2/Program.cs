@@ -1,15 +1,11 @@
-﻿using ConsoleApp2.ServiceBus;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.ServiceModel;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace ConsoleApp2
+﻿namespace ConsoleApp2
 {
+    using ConsoleApp2.ServiceBus;
+    using System;
+    using System.Configuration;
+    using System.ServiceModel;
+    using System.Threading;
+
     class Program
     {
         static void Main(string[] args)

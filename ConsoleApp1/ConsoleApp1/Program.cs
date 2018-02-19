@@ -1,14 +1,10 @@
-﻿using ConsoleApp1.ServiceBus;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp1
+﻿namespace ConsoleApp1
 {
+    using ConsoleApp1.ServiceBus;
+    using System;
+    using System.Configuration;
+    using System.Net;
+
     class Program
     {
         static void Main(string[] args)
