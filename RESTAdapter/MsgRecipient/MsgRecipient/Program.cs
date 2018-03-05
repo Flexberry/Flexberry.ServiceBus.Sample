@@ -6,6 +6,7 @@ using System.Configuration;
 using Newtonsoft.Json;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 
 namespace MsgRecipient
 {
@@ -21,13 +22,20 @@ namespace MsgRecipient
                 {
                     webClient.Encoding = Encoding.UTF8;
                     var response = webClient.DownloadString(url);
-                    List<MessageListItem> items = JsonConvert.DeserializeObject<List<MessageListItem>>(response);
+                    List<Message> items = JsonConvert.DeserializeObject<List<Message>>(response);
                     foreach (var item in items)
                     {
                         string url2 = ConfigurationManager.AppSettings["Address"] + "/Message/" + item.Id;
                         response = webClient.DownloadString(url2);
-                        Message msg = JsonConvert.DeserializeObject<Message>(response);
                         Console.WriteLine(response);
+                        Console.Write("Delete message?[y/n]");
+                        var key=Console.ReadKey(false);
+                        Console.WriteLine();
+                        if (key.Key== ConsoleKey.Y)
+                        {
+                            var res=webClient.UploadValues(url2, "DELETE", new NameValueCollection());
+                            Console.WriteLine($"DELETED - {url2}");
+                        }
                     }
                 }
 
@@ -36,21 +44,11 @@ namespace MsgRecipient
         }
     }
 
-    public class MessageListItem
+    public class Message
     {
         public string Id { get; set; }
         public string MessageTypeID { get; set; }
         public int Priority { get; set; }
         public string MessageFormingTime { get; set; }
     }
-
-    public class Message
-    {
-        public string Id { get; set; }
-        public string Body { get; set; }
-        public string MessageFormingTime { get; set; }
-        public string MessageTypeID { get; set; }
-        public string SenderName { get; set; }
-    }
-
 }
