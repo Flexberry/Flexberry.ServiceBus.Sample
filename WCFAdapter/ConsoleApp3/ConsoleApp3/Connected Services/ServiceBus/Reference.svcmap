@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fb9a25e2-7940-42f6-b73a-84a5baa52da9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7075/WcfService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfService.xsd" MetadataType="Schema" ID="170753e6-8f52-4e28-80d9-888a2085467d" SourceId="1" SourceUrl="http://pegas.:7075/WcfService?xsd=xsd4" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="43a34979-ccc8-45a9-a218-634d58508f23" SourceId="1" SourceUrl="http://localhost:7075/WcfService" />
+    <MetadataFile FileName="WcfService1.xsd" MetadataType="Schema" ID="973bcb65-2b65-408f-8ea7-3f123bffc143" SourceId="1" SourceUrl="http://pegas.:7075/WcfService?xsd=xsd1" />
+    <MetadataFile FileName="WcfService2.xsd" MetadataType="Schema" ID="e834c0c7-0ec5-48e1-b608-ac1f20d59649" SourceId="1" SourceUrl="http://pegas.:7075/WcfService?xsd=xsd0" />
+    <MetadataFile FileName="WcfService3.xsd" MetadataType="Schema" ID="2de4e147-446e-4a1e-b655-1665ed1b2c2e" SourceId="1" SourceUrl="http://pegas.:7075/WcfService?xsd=xsd3" />
+    <MetadataFile FileName="WcfService4.xsd" MetadataType="Schema" ID="1d3a4db7-46c6-49f6-a684-bf8bc9cf9fcc" SourceId="1" SourceUrl="http://pegas.:7075/WcfService?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

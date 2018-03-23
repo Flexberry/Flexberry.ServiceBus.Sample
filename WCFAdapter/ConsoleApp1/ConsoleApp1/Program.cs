@@ -13,38 +13,27 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string s = "";
+            string adaptersCommand = "";
 
-            while (s != "exit")
+            while (adaptersCommand != "exit")
             {
                 Console.WriteLine("Enter your name (for exit type \"exit\"):");
 
-                s = Console.ReadLine();
+                adaptersCommand = Console.ReadLine();
 
-                if (s != "exit")
+                if (adaptersCommand != "exit")
                 {
                     using (var ServiceBus = new ServiceBus.ServiceBusServiceClient())
                     {
-                        // Установим прокси, если нужно.
-                        var useProxy = ConfigurationManager.AppSettings["UseProxy"];
-                        if (!string.IsNullOrEmpty(useProxy) && useProxy.ToLower() == "true")
-                        {
-                            var proxy = new WebProxy(ConfigurationManager.AppSettings["ProxyServer"], true)
-                            {
-                                Credentials = new NetworkCredential(ConfigurationManager.AppSettings["ProxyLogin"], ConfigurationManager.AppSettings["ProxyPass"])
-                            };
-                            WebRequest.DefaultWebProxy = proxy;
-                        }
-
-                        // Создадим сообщение.
+                        // Ввести сообщение.
                         var message = new MessageForESB
                         {
                             ClientID = ConfigurationManager.AppSettings["ServiceID4SB"],
                             MessageTypeID = ConfigurationManager.AppSettings["MessageTypeID"],
-                            Body = "Hello from " + s + "!"
+                            Body = "Hello from " + adaptersCommand + "!"
                         };
 
-                        // И отправим его через шину.
+                        // Отправить сообщение через шину.
                         ServiceBus.SendMessageToESB(message);
 
                         ServiceBus.Close();
