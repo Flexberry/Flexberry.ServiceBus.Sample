@@ -35,6 +35,27 @@ services:
     networks:
       sbnetwork:
 
+  WCFRecipient1:
+    image: "servicebussample/wcfrecipient1"
+    environment:
+      - SBServiceURL=http://servicebus:7075/WcfService
+    networks:
+      sbnetwork:
+
+  RESTSender1:
+    image: "servicebussample/restsender1"
+    environment:
+      - SBServiceURL=http://servicebus:7085/RestService
+    networks:
+      sbnetwork:
+
+  RESTRecipient1:
+    image: "servicebussample/restrecipient1"
+    environment:
+      - SBServiceURL=http://servicebus:7085/RestService
+    networks:
+      sbnetwork:
+
 networks:
   sbnetwork:
 
