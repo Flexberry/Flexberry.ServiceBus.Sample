@@ -1,0 +1,63 @@
+version: '3'
+services:
+  FlexberryServiceBusPostgres:
+    image: "servicebussample/postgres"
+    volumes:
+      - ServiceBusDB:/var/lib/pgsql/data/
+    ports:
+     - "5432:5432"
+    networks:
+      sbnetwork:
+  
+  FlexberryServiceBusEditor:
+    image: "servicebussample/editor"
+    ports:
+     - "1818:80"
+    networks:
+      sbnetwork:
+
+  FlexberryServiceBus:
+    image: "servicebussample/servicebus"
+    environment:
+     - DOCKER_HOSTNAME=${COMPUTERNAME}.${USERDNSDOMAIN}
+    ports:
+     - "7075:7075"
+     - "7085:7085"
+    networks:
+      sbnetwork:
+        aliases:
+        - servicebus
+
+  WCFSender1:
+    image: "servicebussample/wcfsender1"
+    environment:
+      - SBServiceURL=http://servicebus:7075/WcfService
+    networks:
+      sbnetwork:
+
+  WCFRecipient1:
+    image: "servicebussample/wcfrecipient1"
+    environment:
+      - SBServiceURL=http://servicebus:7075/WcfService
+    networks:
+      sbnetwork:
+
+  RESTSender1:
+    image: "servicebussample/restsender1"
+    environment:
+      - SBServiceURL=http://servicebus:7085/RestService
+    networks:
+      sbnetwork:
+
+  RESTRecipient1:
+    image: "servicebussample/restrecipient1"
+    environment:
+      - SBServiceURL=http://servicebus:7085/RestService
+    networks:
+      sbnetwork:
+
+networks:
+  sbnetwork:
+
+volumes:
+  ServiceBusDB: 

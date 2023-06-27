@@ -3,9 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -13,33 +10,33 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string adaptersCommand = "";
+            var lstMessages = new List<string>() { 
+                "Test from sender 1", 
+                "Second test from sender 1",
+                "Test from sender 1. Last message" };
 
-            while (adaptersCommand != "exit")
+            Console.WriteLine("WCFSender1 Started");
+
+            using (var ServiceBus = new ServiceBusServiceClient())
             {
-                Console.WriteLine("Enter your name (for exit type \"exit\"):");
-
-                adaptersCommand = Console.ReadLine();
-
-                if (adaptersCommand != "exit")
+                var messages = lstMessages.Select(x => new MessageForESB
                 {
-                    using (var ServiceBus = new ServiceBus.ServiceBusServiceClient())
-                    {
-                        // Ввести сообщение.
-                        var message = new MessageForESB
-                        {
-                            ClientID = ConfigurationManager.AppSettings["ServiceID4SB"],
-                            MessageTypeID = ConfigurationManager.AppSettings["MessageTypeID"],
-                            Body = "Hello from " + adaptersCommand + "!"
-                        };
+                    ClientID = ConfigurationManager.AppSettings["ServiceID4SB"],
+                    MessageTypeID = ConfigurationManager.AppSettings["MessageTypeID"],
+                    Body = "Hello from WCFSender1! Message: " + x
+                });
 
-                        // Отправить сообщение через шину.
-                        ServiceBus.SendMessageToESB(message);
-
-                        ServiceBus.Close();
-                    }
+                foreach (var message in messages)
+                {
+                    // Отправить сообщение через шину.
+                    ServiceBus.SendMessageToESB(message);
+                    Console.WriteLine("Send message: " + message.Body);
                 }
+
+                ServiceBus.Close();
             }
+
+            Console.WriteLine("WCFSender1 Stoped");
         }
     }
 }
