@@ -1,0 +1,31 @@
+FROM mono:latest as mono
+
+ARG TAG=1.2.1-beta04-service
+
+COPY NewPlatform.Flexberry.ServiceBus/ /Flexberry/NewPlatform.Flexberry.ServiceBus
+
+RUN mono --version && \
+    apt update && \
+	apt install -y git && \
+	msbuild /version && \
+	cd /Flexberry/NewPlatform.Flexberry.ServiceBus && \
+	nuget restore NewPlatform.Flexberry.ServiceBus.sln && \
+	msbuild /p:Configuration=Release NewPlatform.Flexberry.ServiceBus.sln
+
+FROM flexberry/alt.p8-apache2-mono:latest
+
+COPY --from=mono /Flexberry/NewPlatform.Flexberry.ServiceBus/NewPlatform.Flexberry.ServiceBus.WinServiceHost/bin/Release /opt/flexberry-service-bus
+COPY host/prepareConf.sh /opt/
+COPY host/start-flexberry-service-bus.sh /opt/
+
+RUN mkdir /opt/flexberry-service-bus ; adduser flexberry ; \
+	rm /opt/flexberry-service-bus/Mono.Security.dll ; \
+	rm /opt/flexberry-service-bus/NewPlatform.Flexberry.ServiceBus.WinServiceHost.exe.config
+
+USER root
+
+RUN sh -x /opt/prepareConf.sh
+RUN sh -x /bin/change_XMLconfig_from_env.sh
+
+CMD echo "DOCKER_HOSTNAME=$DOCKER_HOSTNAME" && \
+	su -l -c "sh /opt/start-flexberry-service-bus.sh" flexberry
