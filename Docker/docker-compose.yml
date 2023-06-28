@@ -17,7 +17,7 @@ services:
       sbnetwork:
 
   FlexberryServiceBus:
-    image: "servicebussample/servicebus"
+    image: "servicebussample/servicebusgit"
     environment:
      - DOCKER_HOSTNAME=${COMPUTERNAME}.${USERDNSDOMAIN}
     ports:

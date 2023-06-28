@@ -2,7 +2,9 @@ docker build --no-cache -f Dockerfiles/Dockerfile.Postgres -t servicebussample/p
 
 docker build --no-cache -f Dockerfiles/Dockerfile.Editor -t servicebussample/editor .
 
-docker build --no-cache -f Dockerfiles/Dockerfile.ServiceBus -t servicebussample/servicebus .
+rem docker build --no-cache -f Dockerfiles/Dockerfile.ServiceBus -t servicebussample/servicebus .
+
+docker build --no-cache -f Dockerfiles/Dockerfile.ServiceBusGit -t servicebussample/servicebusgit ServiceBus
 
 docker build --no-cache -f Dockerfiles/Dockerfile.WCFSender1 -t servicebussample/wcfsender1 ../WCFAdapter/ConsoleApp1/WCFSender1.ConsoleHost
 
